@@ -1,0 +1,11 @@
+{% extends "./_layouts/default.njk" %}
+
+{%- set heroImage = contenus["photo-principale"].attributes.illustration.data %}
+
+{% block content %}
+  <div class="photos-grid">
+    {% for media in medias %}
+      {% galleryImage media %}
+    {% endfor %}
+  </div>
+{% endblock %}

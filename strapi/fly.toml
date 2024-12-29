@@ -1,0 +1,19 @@
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "atlas-t-strapi"
+primary_region = "cdg"
+
+[build]
+
+[http_service]
+  internal_port = 1337
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
+
+[mounts]
+  source="atlas_t_data"
+  destination="/data"

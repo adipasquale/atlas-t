@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Atlas-t</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Atlas-t" />
+  <link rel="stylesheet" href="/css/water.css" />
+  <link rel="stylesheet" href="/css/style-26bbc82585df1f30f857995542f4ccbd.css" />
+  <link rel="stylesheet" href="/css/photoswipe.css">
+</head>
+
+<body>
+  <header class="{% if heroImage %}with-hero-image{% endif %}">
+    <div class="header-top">
+      <div class="title-and-menu-link">
+        <div class="title">
+          <h1>
+            <a href="/">
+              {% include "../../img/logo.svg" %}
+            </a>
+          </h1>
+        </div>
+        <nav class="menu-link">
+          <a href="#">☰</a>
+        </nav>
+      </div>
+      <nav class="menu hide">
+        <div class="a-propos">
+          <a href="/a-propos">Contact / À propos</a>
+        </div>
+        <div class="nav-columns">
+          <h2>Projets</h2>
+          <ul>
+            {% for projet in projets %}
+            <li>
+              <a href="/projets/{{ projet.attributes.nom | slugify }}">
+                {{ projet.attributes.nom }}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% for rubrique in rubriques %}
+          <div class="menu-group">
+            <h2>{{ rubrique.attributes.titre }}</h2>
+            <ul>
+              {% for tag in rubrique.attributes.tags.data %}
+              <li>
+                <a href="/tags/{{ tag.attributes.titre | slugify }}">
+                  {{ tag.attributes.titre }}
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endfor %}
+        </div>
+      </nav>
+      {% if title %}
+      <h2 class="page-title">{{ title }}</h2>
+      {% endif %}
+    </div>
+    {% if heroImage %}
+    <div class="header-bottom hero-image">
+      {% photoswipeLink heroImage %}
+      {% heroImg heroImage %}
+      {% endphotoswipeLink %}
+    </div>
+    <div class="header-spacer"></div>
+    {% endif %}
+  </header>
+
+  <main>
+    {{ content | safe }}
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <a href="/">Atlas-t</a> · <a href="/a-propos">Contact / À propos</a>
+  </footer>
+
+  <script src="/js/atlas-t.js" type="module"></script>
+
+</html>

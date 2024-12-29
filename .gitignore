@@ -1,0 +1,16 @@
+**/node_modules
+**/.nvmrc
+
+strapi/coverage
+strapi/.env
+strapi/dist
+strapi/build
+strapi/.strapi-updater.json
+strapi/future.db
+strapi/.cache
+strapi/.strapi
+strapi/types
+
+www/.cache
+www/11ty_output
+www/.env

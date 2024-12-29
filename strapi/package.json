@@ -1,0 +1,34 @@
+{
+  "name": "atlas_t_strapi",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Strapi CMS for atlas-t.fr",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-i18n": "^4",
+    "@strapi/plugin-users-permissions": "^4",
+    "@strapi/provider-upload-cloudinary": "^4",
+    "@strapi/strapi": "^4",
+    "better-sqlite3": "^11",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^5.3.4",
+    "strapi-plugin-github-publish": "github:adipasquale/strapi-plugin-github-publish",
+    "styled-components": "^5.3.11"
+  },
+  "author": {
+    "name": "Adrien Di Pasquale"
+  },
+  "strapi": {
+    "uuid": "6838b935-f309-49a3-b9d8-9764b0b54b1d"
+  },
+  "engines": {
+    "node": "<=20"
+  },
+  "license": "MIT"
+}

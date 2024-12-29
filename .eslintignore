@@ -1,0 +1,3 @@
+.cache
+strapi/build
+**/node_modules/**

@@ -1,0 +1,25 @@
+{
+  "name": "atlas-t",
+  "version": "0.0.1",
+  "description": "www.atlas-t.fr - Site web et CMS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adipasquale/atlas-t.git"
+  },
+  "keywords": [
+    "architecture",
+    "web",
+    "scrapi",
+    "11ty"
+  ],
+  "author": "Adrien Di Pasquale",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adipasquale/atlas-t/issues"
+  },
+  "homepage": "https://github.com/adipasquale/atlas-t#readme"
+}
