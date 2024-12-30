@@ -48,7 +48,20 @@ flowchart TD
 
 ## Détails de la config du déploiement de Strapi sur Fly.io
 
-- create a volume atlas_t_data
+Commencez par vous déplacer dans le repo strapi : `cd strapi`
+
+Puis lancez un deploy ce qui devrait créer l’app Fly.io et la machine associée
+```sh
+fly deploy
+```
+
+Associez-y un volume :
+
+```sh
+fly volumes create atlas_t_data
+```
+
+Puis définissez les variables d’environnement nécessaires :
 
 ```sh
 fly secrets set APP_KEYS=$(openssl rand -base64 32) \
@@ -60,5 +73,12 @@ fly secrets set APP_KEYS=$(openssl rand -base64 32) \
   DATABASE_PATH=/data/atlas-t.db \
   CLOUDINARY_NAME=outofscreen \
   CLOUDINARY_KEY=123456789 \
-  CLOUDINARY_SECRET=-abcdefghijklmnop
+  CLOUDINARY_SECRET=abc1234def \
+  GITHUB_TOKEN=github_pat_BLABLA1234
+```
+
+Enfin ajoutez de la mémoire à la machine pour éviter les crashes lors de l’upload de photos
+
+```sh
+fly machine update --vm-memory 1024
 ```
