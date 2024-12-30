@@ -6,7 +6,7 @@ strapi/.env
 strapi/dist
 strapi/build
 strapi/.strapi-updater.json
-strapi/future.db
+strapi/atlas_t.db
 strapi/.cache
 strapi/.strapi
 strapi/types

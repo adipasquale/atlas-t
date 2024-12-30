@@ -1,7 +1,23 @@
 /* general */
 @font-face {
-  font-family: 'Satoshi';
-  src:  url('/css/Satoshi-Variable.woff2') format('woff2');
+  font-family: 'Atlas';
+  src:  url('/css/atlas-regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Atlas';
+  src:  url('/css/atlas-bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Atlas';
+  src:  url('/css/atlas-italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
 }
 
 :root {
@@ -11,13 +27,13 @@
 }
 
 *, body {
-  font-family: Satoshi;
-  font-weight: 300;
+  font-family: Atlas;
 }
 
 body {
   margin-top: 0;
   padding-top: 0;
+  max-width: inherit; /* override water.css */
 }
 
 a {
@@ -91,7 +107,7 @@ header nav.menu-link a {
 }
 header .title {
   flex: 1;
-  text-align: left;
+  text-align: center;
   margin: 0;
   padding: 0;
 }
@@ -102,12 +118,6 @@ header .title svg {
 
 header .title svg path:not([fill="#FFFFFF"]) {
   fill: var(--text-main);
-}
-header h2.page-title {
-  font-size: 1rem;
-  font-weight: normal;
-  margin: 0 0 1rem 0;
-  padding: 0;
 }
 header nav.menu ul {
   list-style-type: none;
