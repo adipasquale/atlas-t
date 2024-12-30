@@ -82,3 +82,8 @@ Enfin ajoutez de la mémoire à la machine pour éviter les crashes lors de l’
 ```sh
 fly machine update --vm-memory 1024
 ```
+
+## Configuration de GitHub Pages
+
+- Activez l’origine « Github Actions » dans l’onglet Pages
+- Dans le menu gauche « Secrets and Variables > Actions » ajoutez les deux variables d’environnement `STRAPI_API_URL` et `STRAPI_API_TOKEN`. Pour ce dernier, créez un token depuis l’interface web de strapi en prod.
