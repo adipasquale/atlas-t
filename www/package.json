@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "DEBUG=* npx eleventy",
+    "build": "npx eleventy",
     "serve": "npx eleventy --serve",
     "debug": "DEBUG=* npx eleventy --serve"
   },
