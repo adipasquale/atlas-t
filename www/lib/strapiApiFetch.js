@@ -2,7 +2,7 @@ require('dotenv').config()
 const EleventyFetch = require("@11ty/eleventy-fetch");
 
 module.exports = async (path) => {
-  let url = `${process.env.STRAPI_API_URL}/api/${path}`;
+  let url = `https://atlas-t-strapi.fly.dev/api/${path}`;
 
   const res = await EleventyFetch(url, {
     duration: "0m",
