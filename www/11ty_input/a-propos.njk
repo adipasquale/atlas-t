@@ -1,6 +1,12 @@
 ---
 layout: default.njk
-title: Équipe
 ---
 
-{{ contenus["a-propos"].attributes.contenu | markdown | safe }}
+<div class="limit-width">
+  <h2> {{ contenus["a-propos"].attributes.titre }}</h2>
+  <div class="photos-grid">
+    {% galleryImage contenus["a-propos"].attributes.illustration.data %}
+  </div>
+
+  {{ contenus["a-propos"].attributes.contenu | markdown | safe }}
+</div>

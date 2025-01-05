@@ -21,9 +21,9 @@
 }
 
 :root {
-  --text-main: #d57236;
-  --text-bright: #d57236;
-  --text-muted: #d57236;
+  --text-main: #000;
+  --text-bright: #000;
+  --text-muted: #000;
 }
 
 *, body {
@@ -31,8 +31,8 @@
 }
 
 body {
-  margin-top: 0;
-  padding-top: 0;
+  margin: 0;
+  padding: 0 0 3rem 0;
   max-width: inherit; /* override water.css */
 }
 
@@ -41,7 +41,7 @@ a {
 }
 
 body > main {
-  // for a-propos page
+  /* for a-propos page */
   min-height: 80vh;
 }
 
@@ -49,18 +49,10 @@ body > footer {
   border-top: none;
 }
 
-h3 {
-  font-size: 1rem;
-  font-weight: normal;
-  margin: 0 0 1rem 0;
-  padding: 0;
-}
-
-
-/* utilities */
-
-.hide {
-  display: none;
+.limit-width{
+  max-width: 800px;
+  margin: auto;
+  padding: 0 1rem;
 }
 
 /*  header and menu */
@@ -70,11 +62,6 @@ header {
   padding: 0;
   display: flex;
   flex-direction: column;
-}
-header.with-hero-image {
-  height: 100vh;
-}
-header .header-top {
 }
 header .header-bottom {
   flex: 1;
@@ -91,57 +78,32 @@ header .header-bottom.hero-image img {
 }
 
 header .title-and-menu-link {
-  display: flex;
-  align-items: center;
   margin: 2rem 0 1rem 0;
   border-bottom: 1px solid var(--text-main);
 }
 header h1 {
   margin: 0;
 }
-header nav.menu-link {
-  font-size: 2rem;
-}
-header nav.menu-link a {
-  text-decoration: none;
-}
 header .title {
   flex: 1;
   text-align: center;
-  margin: 0;
+  margin: 0 0 1rem 0;
   padding: 0;
 }
 header .title svg {
   max-height: 2rem;
 }
 /* css rule for svg paths where fill is different from #FFFFFF */
-
 header .title svg path:not([fill="#FFFFFF"]) {
   fill: var(--text-main);
 }
-header nav.menu ul {
+.menu ul {
   list-style-type: none;
-  margin: 0;
+  margin: 0 0 .5rem 0;
   padding: 0;
-}
-header nav.menu h2 {
-  font-size: inherit;
-  margin: 0;
-}
-header nav.menu .nav-columns {
-  columns: 3;
-  margin-bottom: 3rem;
-}
-header nav.menu .menu-group {
-  break-inside: avoid-column;
-}
-header nav.menu ul,
-header nav.menu > a {
-  display: block;
-  margin-bottom: 1rem;
-}
-.a-propos {
-  margin: 1rem 0 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 /* medias display */
@@ -157,7 +119,7 @@ figure {
   margin-bottom: 3rem;
 }
 .photos-grid img {
-  max-height: 90vh;
+  max-height: 50vh;
   object-fit: cover;
 }
 @media (min-width: 800px) {
@@ -168,6 +130,15 @@ figure {
 
 
 /* projets */
+
+.titles-wrapper {
+  padding: 1rem 0;
+  border-bottom: 1px solid #000;
+  margin-bottom: 3rem;
+}
+.titles h2, .titles h3 {
+  margin-top: 0;
+}
 
 .projet-description {
   margin-top: 3rem;

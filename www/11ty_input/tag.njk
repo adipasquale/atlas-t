@@ -11,10 +11,10 @@ permalink: "tags/{{ tag.attributes.titre | slugify }}/"
 
 {% block content %}
   {% for projet in tag.projets %}
-    {% if projet.nom %}
+    {% if projet.titre %}
       <h3>
-        <a href="/projets/{{ projet.nom | slugify }}">
-          Projet {{projet.nom}}
+        <a href="/projets/{{ projet.titre | slugify }}">
+          Projet {{projet.titre}}
         </a>
       </h3>
     {% endif %}
