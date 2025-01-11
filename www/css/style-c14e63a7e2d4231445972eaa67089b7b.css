@@ -46,6 +46,8 @@ body > main {
 }
 
 body > footer {
+  max-width: 800px;
+  margin: 3rem auto 0;
   border-top: none;
 }
 
