@@ -11,22 +11,20 @@ permalink: "projets/{{ projet.attributes.titre | slugify }}/"
 
 {% block content %}
   <div class="titles-wrapper">
-    <div class="titles limit-width">
+    <div class="titles">
       <h3>{{ projet.attributes.surtitre }}</h3>
       <h2>{{ projet.attributes.titre }}</h2>
       <h3>{{ projet.attributes.titre }}</h3>
     </div>
   </div>
 
-  <div class="limit-width">
-    <div class="photos-grid">
-      {% for media in projet.attributes.medias.data %}
-        {% galleryImage media %}
-      {% endfor %}
-    </div>
+  <div class="photos-grid">
+    {% for media in projet.attributes.medias.data %}
+      {% galleryImage media %}
+    {% endfor %}
+  </div>
 
-    <div class="projet-description">
-      {{ projet.attributes.description | markdown | safe }}
-    </div>
+  <div class="projet-description">
+    {{ projet.attributes.description | markdown | safe }}
   </div>
 {% endblock %}

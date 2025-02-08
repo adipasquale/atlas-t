@@ -2,11 +2,9 @@
 layout: default.njk
 ---
 
-<div class="limit-width">
-  <h2> {{ contenus["a-propos"].attributes.titre }}</h2>
-  <div class="photos-grid">
-    {% galleryImage contenus["a-propos"].attributes.illustration.data %}
-  </div>
-
-  {{ contenus["a-propos"].attributes.contenu | markdown | safe }}
+<h2> {{ contenus["a-propos"].attributes.titre }}</h2>
+<div class="photos-grid">
+  {% galleryImage contenus["a-propos"].attributes.illustration.data %}
 </div>
+
+{{ contenus["a-propos"].attributes.contenu | markdown | safe }}

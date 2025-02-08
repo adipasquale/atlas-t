@@ -30,10 +30,25 @@
   font-family: Atlas;
 }
 
+html {
+  max-width: 1000px; /* override water.css */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 body {
-  margin: 0;
-  padding: 0 0 3rem 0;
-  max-width: inherit; /* override water.css */
+  max-width: inherit;
+  margin-top: 0;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-bottom: 3rem;
+
+  @media (min-width: 800px) {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
 }
 
 a {
@@ -49,12 +64,6 @@ body > footer {
   max-width: 800px;
   margin: 3rem auto 0;
   border-top: none;
-}
-
-.limit-width{
-  max-width: 800px;
-  margin: auto;
-  padding: 0 1rem;
 }
 
 /*  header and menu */
@@ -121,7 +130,7 @@ figure {
   margin-bottom: 3rem;
 }
 .photos-grid img {
-  max-height: 50vh;
+  max-height: 30vh;
   object-fit: cover;
   border: 1px solid transparent;
 }
@@ -130,7 +139,7 @@ figure {
 }
 @media (min-width: 800px) {
   .photos-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
