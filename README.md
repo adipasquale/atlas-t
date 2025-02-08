@@ -4,8 +4,6 @@
 
 - le cropping des images
 - nouvelle police pour le titre uniquement - Yasmine envoie
-- nouveau contenu portfolio PDF + lien pour télécharger. si trop compliqué, lien vers le PDF hébergé déjà existant
-- Cartes de visite en photo avec le(s) numéros de tél sur la page contact
 
 ## Architecture
 

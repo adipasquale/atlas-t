@@ -7,9 +7,23 @@ layout: default.njk
 <div class="contact-page">
   <div>
     {{ contenus["contact"].attributes.contenu | markdown | safe }}
+    {% cloudinaryImage contenus["contact"].attributes.illustration.data %}
   </div>
 
-  <div>
-    {% cloudinaryImage contenus["contact"].attributes.illustration.data %}
+  <div class="underlined-links">
+    Réseaux sociaux
+    <ul>
+      <li>
+        <a href="https://www.instagram.com/atlas.t_collectif/">Instagram @atlas.t_collectif</a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/atlas-t-architecture-urbanisme/">LinkedIn</a>
+      </li>
+    </ul>
+    {% set portfolio = contenus["contact"].attributes.fichier.data %}
+    <a href="https://res.cloudinary.com/outofscreen/image/upload/fl_attachment/{{ portfolio.attributes.hash }}{{ portfolio.attributes.ext }}" target="_blank">
+      portfolio
+      · PDF {{ portfolio.attributes.size | filesize }}
+    </a>
   </div>
 </div>

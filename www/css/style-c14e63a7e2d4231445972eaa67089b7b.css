@@ -166,14 +166,22 @@ figure {
   justify-content: space-between;
   &>div:nth-child(1) {
     flex-grow: 1;
-  }
-  &>div:nth-child(2) {
     img {
       max-height: 300px;
-      max-width: 300px;
+      max-width: 100%;
       object-fit: contain;
     }
   }
+  &>div:nth-child(2) {
+    white-space: nowrap;
+    ul {
+      padding-left: 1rem;
+    }
+  }
+}
+
+.underlined-links a{
+  text-decoration: underline;
 }
 
 

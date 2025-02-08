@@ -87,11 +87,21 @@ module.exports = function (eleventyConfig) {
   })
 
   eleventyConfig.addFilter("markdown", function (value) {
-    return marked.parse(value)
+    return marked.parse(value, {
+      breaks: true
+    })
   })
 
   eleventyConfig.addFilter("jsonify", function (value) {
     return JSON.stringify(value)
+  })
+
+  eleventyConfig.addFilter("filesize", function (bytes) {
+    if (bytes === 0) return '0 Bytes'
+    const k = 1024
+    const sizes = ['KB', 'MB', 'GB']
+    const i = Math.min(Math.floor(Math.log(bytes) / Math.log(k)), sizes.length - 1)
+    return `${(bytes / Math.pow(k, i)).toFixed(1)} ${sizes[i]}`
   })
 
   return {

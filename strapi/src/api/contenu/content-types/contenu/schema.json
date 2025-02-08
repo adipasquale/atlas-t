@@ -31,6 +31,13 @@
     },
     "titre": {
       "type": "string"
+    },
+    "fichier": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
