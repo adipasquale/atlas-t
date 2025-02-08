@@ -1,0 +1,15 @@
+---
+layout: default.njk
+---
+
+<h2> {{ contenus["contact"].attributes.titre }}</h2>
+
+<div class="contact-page">
+  <div>
+    {{ contenus["contact"].attributes.contenu | markdown | safe }}
+  </div>
+
+  <div>
+    {% cloudinaryImage contenus["contact"].attributes.illustration.data %}
+  </div>
+</div>

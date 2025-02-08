@@ -159,6 +159,26 @@ figure {
   margin-top: 3rem;
 }
 
+/* contact */
+.contact-page {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  &>div:nth-child(1) {
+    flex-grow: 1;
+  }
+  &>div:nth-child(2) {
+    img {
+      max-height: 300px;
+      max-width: 300px;
+      object-fit: contain;
+    }
+  }
+}
+
+
+
 /*
   force hide photoswipe stretched thumb while actual image loads because our thumbs have
   different aspect ratios than the actual images and that is not handled by photoswipe
