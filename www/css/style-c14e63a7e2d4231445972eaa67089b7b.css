@@ -132,10 +132,9 @@ figure {
 .photos-grid img {
   max-height: 30vh;
   object-fit: cover;
-  border: 1px solid transparent;
 }
 .photos-grid img:hover {
-  border-color: black;
+  filter: brightness(1.4);
 }
 @media (min-width: 800px) {
   .photos-grid {
