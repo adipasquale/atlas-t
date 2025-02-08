@@ -2,7 +2,6 @@
 
 ## TODO
 
-- le cropping des images
 - nouvelle police pour le titre uniquement - Yasmine envoie
 
 ## Architecture

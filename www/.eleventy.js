@@ -60,8 +60,8 @@ module.exports = function (eleventyConfig) {
         width="${maxWidth}"
         height="${maxHeight}"
         sizes="(min-width: 50em) 50em, 100vw"
-        srcset="${responsiveImageWidths.map(w => `https://res.cloudinary.com/outofscreen/image/upload/f_auto/q_auto/c_fill,ar_2:3,w_${w}/${filename} ${w}w`).join(", ")}"
-        src="https://res.cloudinary.com/outofscreen/image/upload/f_auto/q_auto/c_fill,ar_2:3,w_512/${filename}"
+        srcset="${responsiveImageWidths.map(w => `https://res.cloudinary.com/outofscreen/image/upload/f_auto/q_auto/c_fill,ar_1:1,w_${w}/${filename} ${w}w`).join(", ")}"
+        src="https://res.cloudinary.com/outofscreen/image/upload/f_auto/q_auto/c_fill,ar_1:1,w_512/${filename}"
         alt="${caption || ""}" />
     `
   }
