@@ -31,7 +31,6 @@
 }
 
 html {
-  max-width: 1000px; /* override water.css */
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -55,9 +54,14 @@ a {
   color: inherit;
 }
 
+a[href^="mailto:"]:before {
+  display: none;
+}
+
 body > main {
   /* for a-propos page */
   min-height: 80vh;
+  width: 916px;
 }
 
 body > footer {
@@ -167,8 +171,6 @@ figure {
   &>div:nth-child(1) {
     flex-grow: 1;
     img {
-      max-height: 300px;
-      max-width: 100%;
       object-fit: contain;
     }
   }

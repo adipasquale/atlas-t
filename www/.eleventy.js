@@ -31,6 +31,20 @@ module.exports = function (eleventyConfig) {
     `
   })
 
+  eleventyConfig.addShortcode("contactImg", media => {
+    const { hash, ext, caption, width, height } = media.attributes
+    const filename = `${hash}${ext}`
+
+    return `
+      <img
+      width="${width}"
+      height="${height}"
+      src="https://res.cloudinary.com/outofscreen/image/upload/f_auto/q_auto/${filename}"
+      alt="${caption || ""}"
+      />
+    `
+  })
+
   photoswipeLink = (content, media) => {
     const { hash, ext, width, height } = media.attributes
     const filename = `${hash}${ext}`

@@ -7,7 +7,7 @@ layout: default.njk
 <div class="contact-page">
   <div>
     {{ contenus["contact"].attributes.contenu | markdown | safe }}
-    {% cloudinaryImage contenus["contact"].attributes.illustration.data %}
+    {% contactImg contenus["contact"].attributes.illustration.data %}
   </div>
 
   <div class="underlined-links">
