@@ -134,7 +134,7 @@ figure {
   object-fit: cover;
 }
 .photos-grid img:hover {
-  filter: brightness(1.4);
+  filter: brightness(0.9);
 }
 @media (min-width: 800px) {
   .photos-grid {

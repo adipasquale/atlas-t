@@ -1,9 +1,5 @@
 # Atlas.t
 
-## TODO
-
-- nouvelle police pour le titre uniquement - Yasmine envoie
-
 ## Architecture
 
 - [atlas-t.fr](https://www.atlas-t.fr) : le site public
