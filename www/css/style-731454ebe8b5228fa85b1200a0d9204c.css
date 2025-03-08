@@ -221,6 +221,11 @@ figure {
   max-height: 15rem;
 }
 
+p.presentation {
+  font-style: italic;
+  padding-top: 5rem;
+}
+
 @media (min-width: 800px) {
   .quadrants-container {
     display: grid;
