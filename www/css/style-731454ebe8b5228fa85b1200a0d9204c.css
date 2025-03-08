@@ -324,6 +324,7 @@ p.presentation {
   }
 
   .quadrants-container .center-title {
+    display: block;
     position: absolute;
     top: 50%;
     left: 50%;
