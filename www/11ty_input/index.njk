@@ -1,17 +1,27 @@
 {% extends "./_layouts/default.njk" %}
 
 {% block content %}
-  <div class="photos-grid">
-    {% for projet in projets %}
-      {% set media = projet.attributes.medias.data | first %}
-      <div>
-        <a href="/projets/{{ projet.attributes.titre | slugify }}/">
-          {% cloudinaryImage media %}
-          <div>
-            {{ projet.attributes.titre }}
-          </div>
-        </a>
-      </div>
-    {% endfor %}
-  </div>
+      <div class="quadrants-container">
+        <div class="quadrant mediation">
+            <div class="label">MÉDIATION</div>
+            <img src="/img/mediation.png" alt="Médiation">
+            <p>Résidence de territoire, Concertation et participation citoyenne, Co-construction des projets, Engagement actif des parties prenantes.</p>
+        </div>
+        <div class="quadrant architecture">
+            <div class="label">ARCHITECTURE</div>
+            <img src="/img/architecture.png" alt="Architecture">
+            <p>Conception, Aménagements sur-mesure, Rénovation, Réhabilitation.</p>
+        </div>
+        <div class="quadrant urbanisme">
+            <div class="label">URBANISME</div>
+            <img src="/img/urbanisme.png" alt="Urbanisme">
+            <p>Programmation, Conception des espaces publics, Requalification de secteurs et quartiers entiers, Maitrise d’œuvre urbaine.</p>
+        </div>
+        <div class="quadrant montage">
+            <div class="label">MONTAGE</div>
+            <img src="/img/montage.png" alt="Montage">
+            <p>AMO stratégies de développement, viabilité économique des projets, Montages juridiques et procédures réglementaires et foncières.</p>
+        </div>
+        <div class="center-title">Atlas.t</div>
+    </div>
 {% endblock %}

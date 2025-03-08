@@ -68,7 +68,7 @@ a[href^="mailto:"]:before {
 body > main {
   /* for a-propos page */
   min-height: 80vh;
-  width: 916px;
+  max-width: 916px;
 }
 
 body > footer {
@@ -202,4 +202,127 @@ figure {
  */
 .pswp__img--placeholder {
   display: none !important;
+}
+
+/* for homepage */
+
+.quadrant .label {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+.quadrants-container .center-title {
+  display: none;
+}
+.quadrants-container img {
+  max-height: 15rem;
+}
+
+@media (min-width: 800px) {
+  .quadrants-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+    margin-top: 2rem;
+  }
+
+  .quadrant {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    aspect-ratio: 1 / 1; /* Force each quadrant to be square */
+  }
+
+  .quadrant .label {
+    position: absolute;
+    background: white;
+    padding: 5px 10px;
+  }
+  .quadrant .label {
+    position: absolute;
+    transform-origin: center;
+    border-bottom: 1px solid black;
+    text-align: center;
+    width: 50%;
+  }
+
+  .quadrant:nth-child(1) .label {
+    top: 16%;
+    left: 16%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .quadrant:nth-child(2) .label {
+    top: 16%;
+    right: 16%;
+    transform: translate(50%, -50%) rotate(45deg);
+  }
+
+  .quadrant:nth-child(3) .label {
+    bottom: 24%;
+    left: 24%;
+    transform: translate(-50%, 50%) rotate(45deg);
+  }
+
+  .quadrant:nth-child(4) .label {
+    bottom: 24%;
+    right: 24%;
+    transform: translate(50%, 50%) rotate(-45deg);
+  }
+
+  .quadrant:nth-child(1) {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+  .quadrant:nth-child(4) {
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+  }
+
+  .quadrant:nth-child(1) p {
+    padding: 40% 58% 0 0;
+  }
+
+  .quadrant:nth-child(2) p {
+    padding: 78% 0 0 50%;
+  }
+  .quadrant:nth-child(3) p {
+    padding: 0 65% 0 0;
+  }
+  .quadrant:nth-child(4) p {
+    padding: 0 0 0 60%;
+  }
+
+  .quadrants-container img {
+    display: none;
+  }
+  .quadrant.mediation {
+    background-image: url('/img/mediation.png');
+  }
+  .quadrant.architecture {
+    background-image: url('/img/architecture.png');
+  }
+  .quadrant.urbanisme {
+    background-image: url('/img/urbanisme.png');
+  }
+  .quadrant.montage {
+    background-image: url('/img/montage.png');
+  }
+
+  .quadrants-container .center-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    font-weight: bold;
+    background: white;
+    padding: 10px 30px;
+  }
 }
