@@ -5,6 +5,7 @@ const maxResponsiveImageWidth = Math.max(...responsiveImageWidths)
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("img")
+  eleventyConfig.addPassthroughCopy({ "favicon": "/" })
   eleventyConfig.addPassthroughCopy("js")
   eleventyConfig.addPassthroughCopy("css")
   eleventyConfig.addPassthroughCopy({
