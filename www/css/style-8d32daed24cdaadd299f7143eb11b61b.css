@@ -20,13 +20,20 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: 'AtlasTitle';
+  src:  url('/css/atlas-title.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --text-main: #000;
   --text-bright: #000;
   --text-muted: #000;
 }
 
-*, body {
+body {
   font-family: Atlas;
 }
 
@@ -97,6 +104,7 @@ header .title-and-menu-link {
   border-bottom: 1px solid var(--text-main);
 }
 header h1 {
+  font-family: AtlasTitle;
   margin: 0;
 }
 header .title {
