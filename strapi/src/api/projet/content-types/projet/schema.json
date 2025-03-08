@@ -34,6 +34,12 @@
     },
     "soustitre": {
       "type": "string"
+    },
+    "position": {
+      "type": "integer",
+      "default": 1,
+      "required": true,
+      "unique": true
     }
   }
 }
