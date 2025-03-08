@@ -171,21 +171,24 @@ figure {
 }
 
 /* contact */
-.contact-page {
-  width: 100%;
-  display: flex;
-  gap: 2rem;
-  justify-content: space-between;
-  &>div:nth-child(1) {
-    flex-grow: 1;
-    img {
-      object-fit: contain;
+
+@media (min-width: 800px) {
+  .contact-page {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    &>div:nth-child(1) {
+      flex-grow: 1;
+      img {
+        object-fit: contain;
+      }
     }
-  }
-  &>div:nth-child(2) {
-    white-space: nowrap;
-    ul {
-      padding-left: 1rem;
+    &>div:nth-child(2) {
+      white-space: nowrap;
+      ul {
+        padding-left: 1rem;
+      }
     }
   }
 }
