@@ -18,13 +18,13 @@ permalink: "projets/{{ projet.attributes.titre | slugify }}/"
     </div>
   </div>
 
+  <div class="projet-description">
+    {{ projet.attributes.description | markdown | safe }}
+  </div>
+
   <div class="photos-grid">
     {% for media in projet.attributes.medias.data %}
       {% galleryImage media %}
     {% endfor %}
-  </div>
-
-  <div class="projet-description">
-    {{ projet.attributes.description | markdown | safe }}
   </div>
 {% endblock %}
