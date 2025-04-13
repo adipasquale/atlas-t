@@ -186,9 +186,6 @@ figure {
     }
     &>div:nth-child(2) {
       white-space: nowrap;
-      ul {
-        padding-left: 1rem;
-      }
     }
   }
 }
@@ -196,7 +193,17 @@ figure {
 .underlined-links a{
   text-decoration: underline;
 }
-
+.underlined-links ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  margin-bottom: 2rem;
+}
+.underlined-links li {
+  margin-left: 0;
+  padding-left: 0;
+  margin-bottom: .5rem;
+}
 
 
 /*
