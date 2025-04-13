@@ -74,9 +74,9 @@ module.exports = function (eleventyConfig) {
       <img
         width="${maxWidth}"
         height="${maxHeight}"
-        sizes="(min-width: 50em) 50em, 100vw"
-        srcset="${responsiveImageWidths.map(w => `https://res.cloudinary.com/outofscreen/image/upload/f_auto/q_auto/c_fill,ar_1:1,w_${w}/${filename} ${w}w`).join(", ")}"
-        src="https://res.cloudinary.com/outofscreen/image/upload/f_auto/q_auto/c_fill,ar_1:1,w_512/${filename}"
+        sizes="(min-width: 800px) 30vw, 100vw"
+        srcset="${responsiveImageWidths.map(w => `https://res.cloudinary.com/outofscreen/image/upload/f_auto/q_auto/c_limit,w_${w}/${filename} ${w}w`).join(", ")}"
+        src="https://res.cloudinary.com/outofscreen/image/upload/f_auto/q_auto/${filename}"
         alt="${caption || ""}" />
     `
   }

@@ -157,7 +157,8 @@ figure {
 }
 .photos-grid img {
   max-height: 30vh;
-  object-fit: cover;
+  aspect-ratio: 1;
+  object-fit: contain;
 }
 .photos-grid img:hover {
   filter: brightness(0.9);
