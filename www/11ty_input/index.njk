@@ -1,36 +1,13 @@
 {% extends "./_layouts/default.njk" %}
 
+
 {% block content %}
-  <div class="quadrants-container">
-    <div class="quadrant mediation">
-      <div class="label">MÉDIATION</div>
-      <img src="/img/mediation.png" alt="Médiation">
-      <p>Résidence de territoire, Concertation et participation citoyenne, Co-construction des projets, Engagement actif des parties prenantes.</p>
-    </div>
-    <div class="quadrant architecture">
-      <div class="label">ARCHITECTURE</div>
-      <img src="/img/architecture.png" alt="Architecture">
-      <p>Conception, Aménagements sur-mesure, Rénovation, Réhabilitation.</p>
-    </div>
-    <div class="quadrant urbanisme">
-      <div class="label">URBANISME</div>
-      <img src="/img/urbanisme.png" alt="Urbanisme">
-      <p>Programmation, Conception des espaces publics, Requalification de secteurs et quartiers entiers, Maitrise d’œuvre urbaine.</p>
-    </div>
-    <div class="quadrant montage">
-      <div class="label">MONTAGE</div>
-      <img src="/img/montage.png" alt="Montage">
-      <p>AMO stratégies de développement, viabilité économique des projets, Montages juridiques et procédures réglementaires et foncières.</p>
-    </div>
-    <div class="center-title">Atlas.t</div>
+  {% set imageData = contenus["accueil"].attributes.illustration.data.attributes %}
+  <div class="center">
+    <img
+        src="https://res.cloudinary.com/outofscreen/image/upload/f_auto/q_auto/{{imageData.hash}}{{imageData.ext}}"
+        alt="{{imageData.caption}}" />
   </div>
-  <p class="presentation">
-    Faire la ville selon Atlas.t ne relève pas d’un geste unique, mais d’un travail d’assemblage vivant où se croisent formes, usages, échelles d’espace et de temps et intérêts divers.
-    <br>
-    Nous pensons le projet comme un collage, une mise en relation de ces éléments pour créer une harmonie vivable.
-    <br>
-    Notre approche repose toujours et essentiellement sur le respect du contexte et de ceux qui l’habitent.
-    <br>
-    Notre pratique est transversale, elle accompagne chaque étape de la production urbaine et architecturale, de la programmation à la réalisation, en intégrant la concertation.
-  </p>
+
+  {{ contenus["accueil"].attributes.contenu | markdown | safe }}
 {% endblock %}
