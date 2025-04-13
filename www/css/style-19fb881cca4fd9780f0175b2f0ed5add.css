@@ -73,8 +73,14 @@ a[href^="mailto:"]:before {
   display: none;
 }
 
+/* force pages with small content to fill page width */
+@media (max-width: 916px) {
+  body {
+    width: 100%;
+  }
+}
+
 body > main {
-  /* for a-propos page */
   min-height: 80vh;
   max-width: 916px;
 }
