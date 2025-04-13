@@ -27,6 +27,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Atlas';
+  src:  url('/css/atlas-light.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+
 :root {
   --text-main: #000;
   --text-bright: #000;
@@ -153,6 +161,9 @@ figure {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+.photos-grid {
+  font-size: 12px;
+}
 
 
 /* projets */
@@ -161,6 +172,12 @@ figure {
   padding: 1rem 0;
   border-bottom: 1px solid #000;
   margin-bottom: 3rem;
+}
+.titles h2 {
+  font-size: 40px;
+}
+.titles h3:nth-child(1) {
+  font-weight: 200;
 }
 .titles h2, .titles h3 {
   margin-top: 0;
