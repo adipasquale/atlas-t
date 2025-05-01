@@ -32,12 +32,8 @@
     "titre": {
       "type": "string"
     },
-    "fichier": {
-      "allowedTypes": [
-        "files"
-      ],
-      "type": "media",
-      "multiple": false
+    "file_download_url": {
+      "type": "string"
     }
   }
 }
