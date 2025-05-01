@@ -2,11 +2,15 @@
 
 {% block content %}
   {% set imageData = contenus["accueil"].attributes.illustration.data.attributes %}
-  <div class="center">
-    <img
-        src="https://res.cloudinary.com/outofscreen/image/upload/f_auto/q_auto/{{imageData.hash}}{{imageData.ext}}"
-        alt="{{imageData.caption}}" />
-  </div>
+  <div class="home-image-and-text">
+    <div>
+      <img
+          src="https://res.cloudinary.com/outofscreen/image/upload/f_auto/q_auto/{{imageData.hash}}{{imageData.ext}}"
+          alt="{{imageData.caption}}" />
 
-  {{ contenus["accueil"].attributes.contenu | markdown | safe }}
+    </div>
+    <div>
+      {{ contenus["accueil"].attributes.contenu | markdown | safe }}
+    </div>
+  </div>
 {% endblock %}

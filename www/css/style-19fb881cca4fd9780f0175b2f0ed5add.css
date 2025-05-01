@@ -243,3 +243,22 @@ figure {
 .center {
   text-align: center;
 }
+@media (max-width: 799px) {
+  .home-image-and-text>div:first-child {
+    text-align: center;
+  }
+}
+@media (min-width: 800px) {
+  .home-image-and-text {
+    display: flex;
+    flex-wrap: true;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .home-image-and-text>div{
+    flex: 1 1 0;
+  }
+  .home-image-and-text>div>p:first-child{
+    margin-top: 0;
+  }
+}
