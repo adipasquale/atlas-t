@@ -88,3 +88,12 @@ fly machine update --vm-memory 1024
 
 - Activez l’origine « Github Actions » dans l’onglet Pages
 - Dans le menu gauche « Secrets and Variables > Actions » ajoutez les deux variables d’environnement `STRAPI_API_URL` et `STRAPI_API_TOKEN`. Pour ce dernier, créez un token depuis l’interface web de strapi en prod.
+
+## Configuration de Strapi 
+
+Pour pouvoir déclencher les builds GH Pages depuis Strapi il faut définir une var d'env :
+
+```sh
+cd strapi
+fly secrets set GITHUB_TOKEN=github_pat_ABCDEF
+```
